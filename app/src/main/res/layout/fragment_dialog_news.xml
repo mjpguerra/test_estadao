@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/insightBaseCoordinatorLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newsEditoria"
+            style="@style/Text.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:gravity="left"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Título Vídeo 1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newsTitle"
+            style="@style/Text.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/large_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:gravity="center"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newsEditoria"
+            tools:text="Título Vídeo 1" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/articleCardView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            app:cardCornerRadius="@dimen/rounded_corners"
+            app:layout_constraintDimensionRatio="H,2:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newsTitle"
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/newsImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_no_image_found"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newsDescription"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:gravity="center"
+            android:maxLines="3"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/articleCardView"
+            tools:text="Neste episódio, falamos sobre as recentes pesquisas dos efeitos da prática de meditação e como funciona este treino da mente." />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newsCredit"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:gravity="left"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newsDescription"
+            tools:text="Credito" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/newsOri"
+            style="@style/Text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/large_margin"
+            android:layout_marginTop="@dimen/normal_margin"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:gravity="left"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/newsCredit"
+            tools:text="Origem" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:progressTint="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
