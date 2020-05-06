@@ -18,7 +18,7 @@ object RepositoryModule {
         factory {
             Api<NewsServices>().create(
                 NewsServices::class.java,
-                BuildConfig.THEMOVIE_URL
+                BuildConfig.ESTADAO_URL
             )
         }
 

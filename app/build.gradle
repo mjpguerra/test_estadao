@@ -7,7 +7,7 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.autopass.autocard"
+        applicationId "com.example.estadao"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -22,14 +22,14 @@ android {
         debug {
             debuggable true
             buildConfigField("String", "SHARED_PREFERENCES_FILE_NAME", SHARED_PREFERENCES_FILE_NAME)
-            buildConfigField("String", "THEMOVIE_URL", THEMOVIE_URL)
+            buildConfigField("String", "ESTADAO_URL", ESTADAO_URL)
         }
 
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField("String", "SHARED_PREFERENCES_FILE_NAME", SHARED_PREFERENCES_FILE_NAME)
-            buildConfigField("String", "THEMOVIE_URL", THEMOVIE_URL)
+            buildConfigField("String", "ESTADAO_URL", ESTADAO_URL)
         }
     }
 
