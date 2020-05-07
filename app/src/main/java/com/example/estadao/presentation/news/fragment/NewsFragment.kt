@@ -58,7 +58,6 @@ class NewsFragment : BaseFragment(), NewsContract {
     override fun onNewsClick(newsItem: NewsResponse, position: Int) {
         NewsActivity.newsActivity!!.newsItem = newsItem
         this.context?.let { NewsDialog.buildIntent(it).start(it) }
-        //activity!!.startActivity<NewsDialog>()
         activity!!.overridePendingTransition(R.anim.fadein, R.anim.fadeout)
     }
 
@@ -79,8 +78,7 @@ class NewsFragment : BaseFragment(), NewsContract {
     }
 
     private fun setupRecyclerView(){
-        adapter =
-            NewstemsAdapter(this::onNewsClick)
+        adapter = NewstemsAdapter(this::onNewsClick)
         itemsRecyclerView?.adapter = adapter
         itemsRecyclerView?.layoutManager = LinearLayoutManager(context)
     }
