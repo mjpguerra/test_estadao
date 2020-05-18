@@ -1,27 +1,17 @@
 package com.example.estadao.core.extensions
 
-import com.example.estadao.core.exceptions.BinaryStringException
 import org.joda.time.Days
 import org.joda.time.LocalDate
 
 private val BINARY_PATTERN: Regex = "^[0-1]+\$".toRegex()
 private val INITIAL_JULIAN_DATE: LocalDate = LocalDate(2000, 1, 1)
 
-fun String.binaryToInt(): Int {
-    return if (matches(BINARY_PATTERN)) Integer.parseInt(this, 2)
-    else throw BinaryStringException()
-}
 
 fun LocalDate.toBinaryJulianDate(size: Int): String {
     return Days.daysBetween(INITIAL_JULIAN_DATE, this).days
         .padToBinaryString(size)
 }
 
-fun String.binaryToJulianDate(): LocalDate {
-    if (!matches(BINARY_PATTERN)) throw BinaryStringException()
-    val days = Integer.parseInt(this, 2)
-    return INITIAL_JULIAN_DATE.plusDays(days)
-}
 
 fun Int.padToBinaryString(size: Int): String {
     return toString(2)
